@@ -6,6 +6,6 @@
 ### 文件介绍
 - src\people.png 人物图片
 - index.html 页面显示文件
-- styles.css 页面渲染以及添加动画相关
+- styles.css 页面渲染以及页面相关动画
 - script.js 按钮跳转相关脚本
 - 内容文档.txt 页面内容文稿
