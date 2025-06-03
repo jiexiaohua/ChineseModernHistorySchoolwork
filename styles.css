@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #c41e3a;
+    --primary-dark: #8b0000;
+    --primary-light: rgba(196, 30, 58, 0.1);
+    --text-color: #333;
+    --text-light: #666;
+    --white: #fff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('https://img.freepik.com/free-photo/red-watercolor-paper_95678-446.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px;
+    padding: 1rem 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px var(--shadow);
+    margin-top: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 1rem;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.content h3 {
+    color: var(--primary-dark);
+    margin: 2rem 0 1.5rem 0;
+    font-size: 1.8rem;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+.content h4 {
+    color: var(--primary-dark);
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.4rem;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.back-button {
+    display: block;
+    margin: 3rem auto 0;
+    background-color: var(--text-light);
+    padding: 1rem 2rem;
+}
+
+.back-button:hover {
+    background-color: #444;
+}
+
+small {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--white);
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+    display: none;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+.story-details {
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    margin: 1.5rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0 8px 8px 0;
+}
+
+.quote {
+    font-style: italic;
+    color: var(--text-light);
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background-color: var(--primary-light);
+    border-radius: 8px;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.quote::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    color: var(--primary-color);
+    opacity: 0.2;
+}
+
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+    margin: 0.5rem 0;
+}
+
+/* 添加响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    .button-container {
+        gap: 1rem;
+    }
+
+    button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .content h2 {
+        font-size: 1.8rem;
+    }
+
+    .content h3 {
+        font-size: 1.5rem;
+    }
+
+    .content h4 {
+        font-size: 1.2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+/* 添加打印样式 */
+@media print {
+    body {
+        background: none;
+        color: black;
+    }
+
+    .content {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .back-button {
+        display: none;
+    }
+}
+
+/* 添加新的样式 */
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px var(--shadow);
+}
+
+.image-section {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    font-size: 0.9rem;
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.intro-highlight {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--primary-dark);
+    background: var(--primary-light);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.content-image {
+    position: relative;
+}
+
+.section-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.credits {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* 响应式设计更新 */
+@media (max-width: 968px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-section {
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .content-image {
+        max-height: 300px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 1rem;
+    }
+
+    .intro-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+
+    .intro-highlight {
+        font-size: 1rem;
+    }
+
+    .image-section {
+        max-height: 300px;
+    }
+
+    .content-image {
+        max-height: 200px;
+    }
+}
+
+/* 动画效果 */
+.hero-section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 在现有样式的基础上添加新样式 */
+
+.tech-description {
+    text-align: center;
+    color: var(--white);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.6rem 1.2rem;
+    border-radius: 15px;
+    margin: 0.5rem auto;
+    max-width: 500px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.tech-description:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.tech-description span {
+    color: rgba(44, 194, 44, 0.9);
+    font-weight: 500;
+    margin: 0 0.2rem;
+}
+
+/* 添加导航按钮样式 */
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem auto 0;
+}
+
+.nav-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: var(--text-light);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-button:hover {
+    background-color: #444;
+    transform: translateY(-3px);
+}
+
+.nav-button.next {
+    background-color: var(--primary-color);
+}
+
+.nav-button.next:hover {
+    background-color: var(--primary-dark);
+}

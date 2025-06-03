@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>革命英雄崔库则</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="main-content">
+            <h1>革命英雄崔库则</h1>
+            <p class="tech-description">技术实现：由<span>HTML</span>、<span>CSS</span>、<span>Javascript</span>实现的前端静态页面</p>
+            <div class="hero-section">
+                <div class="image-section">
+                    <img src="src\people.png" alt="革命英雄崔库则" class="hero-image">
+                    <div class="image-caption">崔库则 - 太岳山区抗日英雄</div>
+                </div>
+                <div class="intro-section">
+                    <h2>选题理由</h2>
+                    <p class="intro-text">崔库则是长子县本土成长起来的抗日英雄，其事迹扎根太岳山区，体现山西人民在抗战中的独特贡献。夜割电线、岭底伏击等战斗细节丰富，兼具传奇性与教育性。</p>
+                    <p class="intro-highlight">其"胆大心细、善用奇谋"的战术思维，呼应习近平关于"人民战争思想"的现实启示。通过研究崔库则的事迹，我们可以深入了解抗日战争时期华北敌后战场的特点，学习民兵游击战术的创新与应用。</p>
+                    <div class="button-container">
+                        <button onclick="showContent('content2')">人物生平</button>
+                        <button onclick="showContent('content3')">英雄事迹</button>
+                        <button onclick="showContent('content4')">历史启示</button>
+                    </div>
+                </div>
+            </div>
+            <small class="credits">参与人员（排名不分先后）：解镇宇（计科），季琪霖（计科），杨栋博（计科），汲璐凯（计科），郝世毓（文博），武雨桐（计科）</small>
+        </div>
+
+        <div id="content2" class="content hidden">
+            <h2>人物生平与时代背景</h2>
+            <section>
+                <h3>生平简介</h3>
+                <div class="story-details">
+                    <p>崔库则，1915年出生，山西省长子县鲍店镇北郜村人。他是中国共产党优秀党员，抗日民兵英雄，太岳军区著名杀敌模范。</p>
+                    <p>1938年，在民族危亡之际，崔库则毅然投身革命事业。他先后担任：</p>
+                    <ul>
+                        <li>太岳游击队队员</li>
+                        <li>长子县西山民兵游击队队长</li>
+                        <li>解放军战士</li>
+                        <li>长子县五区武装部部长</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h3>历史背景</h3>
+                <div class="story-details">
+                    <p>崔库则的故事发生在抗日战争时期华北敌后战场。这一时期的特点是：</p>
+                    <ul>
+                        <li>民族存亡危急关头</li>
+                        <li>敌后游击战成为重要战略</li>
+                        <li>人民战争全面展开</li>
+                    </ul>
+                    <p class="quote">在这样的背景下，崔库则作为普通农民出身的民兵领袖，凭借坚定的信念、灵活的战术和深厚的群众基础，在山西长子县地区书写了抗日救国的传奇。</p>
+                </div>
+            </section>
+            <div class="navigation-buttons">
+                <button class="nav-button" onclick="showMain()">← 返回主页</button>
+                <button class="nav-button next" onclick="showContent('content3')">英雄事迹 →</button>
+            </div>
+        </div>
+
+        <div id="content3" class="content hidden">
+            <h2>英雄事迹</h2>
+            <section>
+                <h3>夜割电线破敌通讯（1943年夏）</h3>
+                <div class="story-details">
+                    <h4>行动背景</h4>
+                    <p>1943年夏，为配合八路军主力反击日军对岳南地区的"扫荡"，太岳军区下达了切断敌人通讯线路的重要任务。目标是切断张店丹朱岭至鲍店沿线七个日伪据点的通讯线路。</p>
+                    
+                    <h4>战术部署</h4>
+                    <ul>
+                        <li>侦察班（前哨）：负责侦查敌情</li>
+                        <li>掩护班（后卫）：保护作战部队</li>
+                        <li>割线班（10名爬杆能手）：执行主要任务</li>
+                        <li>转送班：负责搬运缴获物资</li>
+                    </ul>
+                    
+                    <h4>战斗过程</h4>
+                    <p class="quote">民兵利用日军"机枪封锁但无实际巡逻"的漏洞，在枪声"伴奏"下推进。其中，割线班成员王金福连续攀爬百余根电线杆，即使衣服扯烂、胸口擦伤仍坚持作业。</p>
+                    
+                    <h4>战果</h4>
+                    <ul>
+                        <li>缴获铁丝4000余斤</li>
+                        <li>切断七个据点间的通讯</li>
+                        <li>为八路军主力作战创造有利条件</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3>岭底伏击战（1943年10月）</h3>
+                <div class="story-details">
+                    <h4>战前准备</h4>
+                    <p>崔库则通过内线情报，获知日伪军将对横水根据地发动"扫荡"。他立即组织三十余名队员，在岭底村东的南山松林与北岭高地设伏，并在敌人必经之路埋设地雷。</p>
+
+                    <h4>战斗经过</h4>
+                    <p>当约三百名伪军进入伏击圈时，崔库则指挥部队：</p>
+                    <ol>
+                        <li>引爆地雷，打乱敌军阵型</li>
+                        <li>步枪、手榴弹协同作战</li>
+                        <li>击中敌军指挥官，瓦解敌军士气</li>
+                        <li>乘胜追击至良坪村</li>
+                    </ol>
+
+                    <h4>战略创新</h4>
+                    <p class="quote">崔库则与战友孔春全伪装成伪军，以查岗为名潜入敌营，获取情报后发起突袭，展现了高超的战术智慧。</p>
+
+                    <h4>战果统计</h4>
+                    <ul>
+                        <li>击毙日伪军30余名，活捉2名</li>
+                        <li>缴获：
+                            <ul>
+                                <li>轻机枪1挺</li>
+                                <li>步枪17支</li>
+                                <li>掷弹筒1具</li>
+                                <li>大量弹药</li>
+                            </ul>
+                        </li>
+                        <li>解救群众财产：
+                            <ul>
+                                <li>黄牛263头</li>
+                                <li>绵羊1600余只</li>
+                                <li>毛驴30余头</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <div class="navigation-buttons">
+                <button class="nav-button" onclick="showContent('content2')">← 人物生平</button>
+                <button class="nav-button next" onclick="showContent('content4')">历史启示 →</button>
+            </div>
+        </div>
+
+        <div id="content4" class="content hidden">
+            <h2>历史启示</h2>
+            <section>
+                <h3>精神价值</h3>
+                <div class="story-details">
+                    <p>崔库则的事迹展现了：</p>
+                    <ul>
+                        <li>坚定的革命信念</li>
+                        <li>高超的战术智慧</li>
+                        <li>为民服务的宗旨</li>
+                        <li>不畏牺牲的精神</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3>现实意义</h3>
+                <div class="story-details">
+                    <p>崔库则的故事告诉我们：</p>
+                    <ul>
+                        <li>人民战争的伟大力量</li>
+                        <li>群众路线的重要性</li>
+                        <li>革命传统的永恒价值</li>
+                    </ul>
+                    <p class="quote">在今天追忆崔库则，不仅是铭记一个英雄的名字，更是回望那个苦难而光荣的时代，让我们从他身上汲取力量与智慧，坚定理想信念，继续传承与弘扬中华民族不屈不挠、众志成城的抗战精神。</p>
+                </div>
+            </section>
+            <div class="navigation-buttons">
+                <button class="nav-button" onclick="showContent('content3')">← 英雄事迹</button>
+                <button class="nav-button next" onclick="showMain()">返回主页 →</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
